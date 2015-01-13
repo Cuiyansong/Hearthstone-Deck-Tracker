@@ -5,7 +5,7 @@
                       xmlns:controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
                       xmlns:local="clr-namespace:Hearthstone_Deck_Tracker"
                       xmlns:controls1="clr-namespace:Hearthstone_Deck_Tracker.Controls"
-                      Title="Hearthstone Deck Tracker" Height="620" Width="550"
+                      Title="{DynamicResource MainWindow_TITLE}" Height="620" Width="550"
                       MinHeight="525" MinWidth="590"
                       Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" Closing="Window_Closing"
                       Icon="..\Images\HearthstoneDeckTracker.ico" Activated="MetroWindow_Activated"
@@ -28,7 +28,7 @@
                             <VisualBrush Visual="{StaticResource appbar_settings}" />
                         </Rectangle.Fill>
                     </Rectangle>
-                    <TextBlock Margin="4" VerticalAlignment="Center" Text="options" />
+                    <TextBlock Margin="4" VerticalAlignment="Center" Text="{DynamicResource MainWindow_OPTIONS}" />
                 </StackPanel>
             </Button>
             <Button Click="BtnHelp_OnClick">
@@ -38,7 +38,7 @@
                             <VisualBrush Visual="{StaticResource appbar_question}" />
                         </Rectangle.Fill>
                     </Rectangle>
-                    <TextBlock Margin="4" VerticalAlignment="Center" Text="help" />
+                    <TextBlock Margin="4" VerticalAlignment="Center" Text="{DynamicResource MainWindow_HELP}" />
                 </StackPanel>
             </Button>
             <Button Click="BtnDonate_OnClick">
@@ -48,7 +48,7 @@
                             <VisualBrush Visual="{StaticResource appbar_heart}" />
                         </Rectangle.Fill>
                     </Rectangle>
-                    <TextBlock Margin="4" VerticalAlignment="Center" Text="donate" />
+                    <TextBlock Margin="4" VerticalAlignment="Center" Text="{DynamicResource MainWindow_DONATE}" />
                 </StackPanel>
             </Button>
         </controls:WindowCommands>
