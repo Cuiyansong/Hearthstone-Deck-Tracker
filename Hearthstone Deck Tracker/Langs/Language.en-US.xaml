@@ -2,10 +2,122 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:s="clr-namespace:System;assembly=mscorlib">
 
+    <!--MainWindow.xaml-->
     <s:String x:Key="MainWindow_TITLE">Hearthstone Deck Tracker</s:String>
     <s:String x:Key="MainWindow_OPTIONS">options</s:String>
     <s:String x:Key="MainWindow_HELP">help</s:String>
     <s:String x:Key="MainWindow_DONATE">donate</s:String>
+    <s:String x:Key="MainWindow_HEADER_OPTIONS">Options</s:String>
+    <s:String x:Key="MainWindow_HEADER_HELP">Help</s:String>
+    <s:String x:Key="MainWindow_HEADER_SORTFILTERDECK">Sort / Filter Decks</s:String>
+    <s:String x:Key="MainWindow_HEADER_NOTES">Notes</s:String>
+    <s:String x:Key="MainWindow_HEADER_SETTAGS">Set tags</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_DECKS">_DECKS</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_USENODECK">USE _NO DECK</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_AUTODECKSELECTION">AUTO DECK SELECTION</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_SORTFILTER">_SORT / FILTER</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_QUICKFILTER">_QUICK FILTER</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_CLASSCARDFIRST">CLASS CARD FIRST</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_NEW">_NEW</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_DRUID">_DRUID</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_HUNTER">_HUNTER</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_MAGE">_MAGE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_PRIST">_PRIEST</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_PALADIN">_PALADIN</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_ROGUE">_ROGUE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_SHAMAN">_SHAMAN</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_WARLOCK">_WARLOCK</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_WARRIOR">_WARRIOR</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_EDIT">_EDIT</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_DECK">_DECK</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_UPDATE">_UPDATE (WEB)</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_NOTES">_NOTES</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_TAGS">_TAGS</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_QUICKSETTAG">_QUICK SET TAG</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_DELETE">DELETE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_CLONE">CLONE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_IMPORT">_IMPORT</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_FROMWEB">FROM _WEB</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_FROMGAME">FROM GAME: _ARENA</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_FROMFILE">FROM _FILE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_FROMIDSTRING">FROM _ID STRING</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_FROMCLIPBOARD">FROM CLIPBOARD: _CARD NAMES</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_FROMLASTGAME">FROM LAST _GAME</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_EXPORT">E_XPORT</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_TOHEARTHSTONE">TO _HEARTHSTONE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_TOHEARTHSTONEFROMWEB">TO HEARTHSTONE FROM _WEB</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_SAVEASXML">SAVE AS _XML</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_COPYIDSTOCLIPBOARD">COPY IDS TO _CLIPBOARD</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_SCREENSHOT">_SCREENSHOT</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_STATS">_STATS</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_ERPLAYS">_REPLAYS</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_LASTGAME">_LAST GAME</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_SELECTGAME">_SELECT GAME</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_LOADFILE">LOAD _FiLE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_SAVE">SAVE</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_CANCEL">CANCEL</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_FILTER">FILTER</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_MANA">MANA</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_ALL">ALL</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_TYPE">TYPE</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_CLASSONLY">CLASS ONLY</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_NEUTRALONLY">NEUTRAL ONLY</s:String>
+    <s:String x:Key="MainWindow_MENUITEM_SET">SET</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_BASIC">BASIC</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_EXPERT">EXPERT</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_PROMOTION">PROMOTION</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_CURSEOFNAXXRAMAS">CURSE OF NAXXRAMAS</s:String>
+    <s:String x:Key="MainWindow_RADIOBUTTON_GOBLINSVSGNOMES">GOBLINS VS GNOMES</s:String>
+    <s:String x:Key="MainWindow_NAMEALREADYEXISTS">Name already exists</s:String>
+
+    <!--DeckSelectionDialog.xaml-->
+    <s:String x:Key="DeckSelectionDialog_TITLE">Wrong deck detected</s:String>
+    <s:String x:Key="DeckSelectionDialog_SELECTYOURDECK">Select your deck</s:String>
+
+    <!--NoteDialog.xaml-->
+    <s:String x:Key="NoteDialog_TITLE">NOTE FOR THIS GAME</s:String>
+    <s:String x:Key="NoteDialog_SET">Set</s:String>
+    <s:String x:Key="NoteDialog_SAVEWITHENTER">Save with ENTER</s:String>
+
+    <!--MoveGameDialog.xaml-->
+    <s:String x:Key="MoveGameDialog_TITLE">Select target deck</s:String>
+
+    <!--OpponentWindow.xaml-->
+    <s:String x:Key="OpponentWindow_TITLE">Opponent</s:String>
+    <s:String x:Key="OpponentWindow_VS">VS: 0 - 0 (0%)</s:String>
+    <s:String x:Key="OpponentWindow_HAND">Hand: 0"</s:String>
+
+    <!--OverlayWindow.xaml-->
+    <s:String x:Key="OverlayWindow_TITLE">HearthstoneOverlay</s:String>
+    <s:String x:Key="OverlayWindow_VS">VS: 0 - 0 (0%)</s:String>
+
+    <!--PlayerWindow.xaml-->
+    <s:String x:Key="PlayerWindow_TITLE">Player</s:String>
+    <s:String x:Key="PlayerWindow_DECKTITLE">Deck title</s:String>
+    <s:String x:Key="PlayerWindow_HAND">Hand: 0"</s:String>
+
+    <!--StatsWindow.xaml-->
+    <s:String x:Key="StatsWindow_TITLE">Stats</s:String>
+
+    <!--TimerWindow.xaml-->
+    <s:String x:Key="TimerWindow_TITLE">Timer</s:String>
+
+    <!--SortFilterDecks.xaml-->
+    <s:String x:Key="SortFilterDecks_ComboBoxItem_NAME">Name</s:String>
+    <s:String x:Key="SortFilterDecks_ComboBoxItem_LASTEDITED">Last Edited</s:String>
+    <s:String x:Key="SortFilterDecks_ComboBoxItem_TAG">Tag</s:String>
+    <s:String x:Key="SortFilterDecks_ComboBoxItem_WINRATE">Win Rate</s:String>
+    <s:String x:Key="SortFilterDecks_FILTERBYTAGS">Filter by tags:</s:String>
+    <s:String x:Key="SortFilterDecks_UP">up</s:String>
+    <s:String x:Key="SortFilterDecks_DOWN">down</s:String>
+    <s:String x:Key="SortFilterDecks_TOP">top</s:String>
+    <s:String x:Key="SortFilterDecks_BOTTOM">bottom</s:String>
+    <s:String x:Key="SortFilterDecks_DELETESELECTED">Delete Selected</s:String>
+    <s:String x:Key="SortFilterDecks_FILTEROPERATION">Filter operation</s:String>
+
+    <!--Options.xaml-->
+    <s:String x:Key="Options_TABITEM_GENERAL">General</s:String>
+
 
 
 </ResourceDictionary>

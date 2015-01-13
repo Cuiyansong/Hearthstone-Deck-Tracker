@@ -10,7 +10,7 @@
              d:DesignHeight="700" d:DesignWidth="515">
     <Grid>
         <TabControl Width="auto">
-            <TabItem Header="General" Background="{x:Null}">
+            <TabItem Header="{DynamicResource Options_TABITEM_GENERAL}" Background="{x:Null}">
                 <ScrollViewer>
                     <Grid>
                         <Grid.ColumnDefinitions>

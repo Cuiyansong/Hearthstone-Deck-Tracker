@@ -13,13 +13,13 @@
                 <Label Content="Sort decks by:" FontSize="14" />
                 <ComboBox Name="ComboboxDeckSorting" Width="120" HorizontalAlignment="Right"
                           SelectionChanged="Selector_OnSelectionChanged">
-                    <system:String>Name</system:String>
-                    <system:String>Last Edited</system:String>
-                    <system:String>Tag</system:String>
-                    <system:String>Win Rate</system:String>
+                    <ComboBoxItem Content="{DynamicResource SortFilterDecks_ComboBoxItem_NAME}" />
+                    <ComboBoxItem Content="{DynamicResource SortFilterDecks_ComboBoxItem_LASTEDITED}" />
+                    <ComboBoxItem Content="{DynamicResource SortFilterDecks_ComboBoxItem_TAG}" />
+                    <ComboBoxItem Content="{DynamicResource SortFilterDecks_ComboBoxItem_WINRATE}" /> 
                 </ComboBox>
             </DockPanel>
-            <Label Content="Filter by tags:" FontSize="14" DockPanel.Dock="Top" />
+            <Label Content="{DynamicResource SortFilterDecks_FILTERBYTAGS}" FontSize="14" DockPanel.Dock="Top" />
             <Grid Margin="0,3,0,0" DockPanel.Dock="Bottom">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
@@ -27,12 +27,12 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Name="BtnUp"  Margin="0,0,3,0" Grid.Column="0" Content="up" Click="BtnUp_OnClick"></Button>
-                <Button Name="BtnDown" Margin="3,0,3,0" Grid.Column="1" Content="down" Click="BtnDown_OnClick"></Button>
-                <Button Name="BtnTop"  Margin="3,0,3,0" Grid.Column="2" Content="top" Click="BtnTop_OnClick"></Button>
-                <Button Name="BtnBottom" Margin="3,0,0,0" Grid.Column="3" Content="bottom" Click="BtnBottom_OnClick"></Button>
+                <Button Name="BtnUp"  Margin="0,0,3,0" Grid.Column="0" Content="{DynamicResource SortFilterDecks_UP}" Click="BtnUp_OnClick"></Button>
+                <Button Name="BtnDown" Margin="3,0,3,0" Grid.Column="1" Content="{DynamicResource SortFilterDecks_DOWN}" Click="BtnDown_OnClick"></Button>
+                <Button Name="BtnTop"  Margin="3,0,3,0" Grid.Column="2" Content="{DynamicResource SortFilterDecks_TOP}" Click="BtnTop_OnClick"></Button>
+                <Button Name="BtnBottom" Margin="3,0,0,0" Grid.Column="3" Content="{DynamicResource SortFilterDecks_BOTTOM}" Click="BtnBottom_OnClick"></Button>
             </Grid>
-            <Button x:Name="BtnDeleteTag" DockPanel.Dock="Bottom" Margin="0,3,0,0" Content="Delete Selected"
+            <Button x:Name="BtnDeleteTag" DockPanel.Dock="Bottom" Margin="0,3,0,0" Content="{DynamicResource SortFilterDecks_DELETESELECTED}"
                     VerticalAlignment="Bottom" Width="auto" Click="BtnDeteleTag_Click" Height="26" />
 
             <Grid Margin="0,3,0,0" DockPanel.Dock="Bottom">
@@ -45,7 +45,7 @@
                 <Button Name="BtnAddTag" Content="Add" Click="BtnAddTag_Click" Height="26" Grid.Column="1"
                         Margin="3,0,0,0" Width="auto" />
             </Grid>
-            <controls:ToggleSwitch Name="OperationSwitch" Header="Filter operation" DockPanel.Dock="Bottom"
+            <controls:ToggleSwitch Name="OperationSwitch" Header="{DynamicResource SortFilterDecks_FILTEROPERATION}" DockPanel.Dock="Bottom"
                                    OnLabel="And" OffLabel="Or" Width="124" HorizontalAlignment="Right"
                                    Checked="OperationSwitch_OnChecked" Unchecked="OperationSwitch_OnUnchecked" />
 

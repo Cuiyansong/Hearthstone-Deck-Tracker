@@ -55,11 +55,11 @@
     </controls:MetroWindow.RightWindowCommands>
     <Grid>
 
-        <controls:Flyout x:Name="FlyoutOptions" Position="Left" Panel.ZIndex="102" Header="Options"
+        <controls:Flyout x:Name="FlyoutOptions" Position="Left" Panel.ZIndex="102" Header="{DynamicResource MainWindow_HEADER_OPTIONS}"
                          Width="515">
             <local:Options x:Name="Options" Margin="0,-35,0,0"></local:Options>
         </controls:Flyout>
-        <controls:Flyout x:Name="FlyoutHelp" Position="Left" Panel.ZIndex="102" Header="Help"
+        <controls:Flyout x:Name="FlyoutHelp" Position="Left" Panel.ZIndex="102" Header="{DynamicResource MainWindow_HEADER_HELP}"
                          Width="{Binding Width, RelativeSource={RelativeSource AncestorType=local:MainWindow}}">
             <local:Help x:Name="Help"></local:Help>
         </controls:Flyout>
@@ -71,15 +71,15 @@
                          Width="{Binding Width, RelativeSource={RelativeSource AncestorType=local:MainWindow}}">
             <local:GameDetails x:Name="GameDetailsFlyout"></local:GameDetails>
         </controls:Flyout>
-        <controls:Flyout x:Name="FlyoutSortFilter" Header="Sort / Filter Decks" Position="Right"
+        <controls:Flyout x:Name="FlyoutSortFilter" Header="{DynamicResource MainWindow_HEADER_SORTFILTERDECK}" Position="Right"
                          Width="255" Height="auto" Panel.ZIndex="100">
             <local:SortFilterDecks Width="auto" Height="auto" x:Name="SortFilterDecksFlyout" />
         </controls:Flyout>
-        <controls:Flyout x:Name="FlyoutNotes" Header="Notes" Position="Right" Width="255" Height="auto"
+        <controls:Flyout x:Name="FlyoutNotes" Header="{DynamicResource MainWindow_HEADER_NOTES}" Position="Right" Width="255" Height="auto"
                          Panel.ZIndex="100">
             <local:DeckNotes Width="auto" Height="auto" x:Name="DeckNotesEditor" Margin="3,0,0,0"></local:DeckNotes>
         </controls:Flyout>
-        <controls:Flyout x:Name="FlyoutMyDecksSetTags" Header="Set tags" Position="Right" Width="255"
+        <controls:Flyout x:Name="FlyoutMyDecksSetTags" Header="{DynamicResource MainWindow_HEADER_SETTAGS}" Position="Right" Width="255"
                          Height="auto" Panel.ZIndex="100">
             <local:SortFilterDecks Width="auto" Height="auto" x:Name="TagControlEdit" />
         </controls:Flyout>
@@ -94,7 +94,7 @@
                 <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Menu Grid.Row="0" Grid.ColumnSpan="2">
-                <MenuItem Header="_DECKS">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_DECKS}">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -102,16 +102,16 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </MenuItem.Icon>
-                    <MenuItem Header="USE _NO DECK" Click="ButtonNoDeck_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_USENODECK}" Click="ButtonNoDeck_Click">
                     </MenuItem>
-                    <CheckBox x:Name="CheckboxDeckDetection" Margin="-24,0,0,0" Content="AUTO DECK SELECTION"
+                    <CheckBox x:Name="CheckboxDeckDetection" Margin="-24,0,0,0" Content="{DynamicResource MainWindow_MENUITEM_AUTODECKSELECTION}"
                               FontSize="14"
                               Checked="CheckboxDeckDetection_Checked"
                               Unchecked="CheckboxDeckDetection_Unchecked" />
                     <Separator />
-                    <MenuItem Header="_SORT / FILTER" Click="BtnSortFilter_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_SORTFILTER}" Click="BtnSortFilter_Click">
                     </MenuItem>
-                    <MenuItem Name="MenuItemQuickSelectFilter" Header="_QUICK FILTER">
+                    <MenuItem Name="MenuItemQuickSelectFilter" Header="{DynamicResource MainWindow_MENUITEM_QUICKFILTER}">
                         <MenuItem.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock Text="{Binding}" PreviewMouseDown="MenuItemQuickFilter_Click"></TextBlock>
@@ -119,12 +119,12 @@
                         </MenuItem.ItemTemplate>
                     </MenuItem>
                     <Separator />
-                    <CheckBox x:Name="CheckboxClassCardsFirst" Margin="-24,0,0,0" Content="CLASS CARDS FIRST"
+                    <CheckBox x:Name="CheckboxClassCardsFirst" Margin="-24,0,0,0" Content="{DynamicResource MainWindow_MENUITEM_CLASSCARDFIRST}"
                               FontSize="14"
                               Checked="CheckboxClassCardsFirst_Checked"
                               Unchecked="CheckboxClassCardsFirst_Unchecked" />
                 </MenuItem>
-                <MenuItem Header="_NEW">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_NEW}">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -132,53 +132,53 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </MenuItem.Icon>
-                    <MenuItem Header="_DRUID" Click="BtnNewDeckDruid_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_DRUID}" Click="BtnNewDeckDruid_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/druid_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_HUNTER" Click="BtnNewDeckHunter_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_HUNTER}" Click="BtnNewDeckHunter_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/hunter_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_MAGE" Click="BtnNewDeckMage_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_MAGE}" Click="BtnNewDeckMage_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/mage_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_PRIEST" Click="BtnNewDeckPriest_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_PRIST}" Click="BtnNewDeckPriest_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/priest_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_PALADIN" Click="BtnNewDeckPaladin_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_PALADIN}" Click="BtnNewDeckPaladin_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/paladin_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_ROGUE" Click="BtnNewDeckRogue_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_ROGUE}" Click="BtnNewDeckRogue_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/rogue_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_SHAMAN" Click="BtnNewDeckShaman_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_SHAMAN}" Click="BtnNewDeckShaman_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/shaman_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_WARLOCK" Click="BtnNewDeckWarlock_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_WARLOCK}" Click="BtnNewDeckWarlock_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/warlock_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
-                    <MenuItem Header="_WARRIOR" Click="BtnNewDeckWarrior_Click">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_WARRIOR}" Click="BtnNewDeckWarrior_Click">
                         <MenuItem.Icon>
                             <Image Source="../Resources/warrior_small.png" Width="24" Height="24" Margin="3,0,0,0"></Image>
                         </MenuItem.Icon>
                     </MenuItem>
                 </MenuItem>
-                <MenuItem Header="_EDIT" Name="MenuItemEdit">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_EDIT}" Name="MenuItemEdit">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -186,11 +186,11 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </MenuItem.Icon>
-                    <MenuItem Header="_DECK" Click="BtnEditDeck_Click" />
-                    <MenuItem Name="MenuItemUpdateDeck" Header="_UPDATE (WEB)" Click="BtnUpdateDeck_Click" />
-                    <MenuItem Header="_NOTES" Click="BtnNotes_Click" />
-                    <MenuItem Header="_TAGS" Click="BtnTags_Click" />
-                    <MenuItem Name="MenuItemQuickSetTag" Header="_QUICK SET TAG">
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_DECK}" Click="BtnEditDeck_Click" />
+                    <MenuItem Name="MenuItemUpdateDeck" Header="{DynamicResource MainWindow_MENUITEM_UPDATE}" Click="BtnUpdateDeck_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_NOTES}" Click="BtnNotes_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_TAGS}" Click="BtnTags_Click" />
+                    <MenuItem Name="MenuItemQuickSetTag" Header="{DynamicResource MainWindow_MENUITEM_QUICKSETTAG}">
                         <MenuItem.ItemTemplate>
                             <DataTemplate>
                                 <CheckBox Content="{Binding Name}" IsChecked="{Binding Selected}" Margin="-24,0,0,0" ></CheckBox>
@@ -198,10 +198,10 @@
                         </MenuItem.ItemTemplate>
                     </MenuItem>
                     <Separator />
-                    <MenuItem Header="DELETE" Click="BtnDeleteDeck_Click" />
-                    <MenuItem Header="CLONE" Click="BtnCloneDeck_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_DELETE}" Click="BtnDeleteDeck_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_CLONE}" Click="BtnCloneDeck_Click" />
                 </MenuItem>
-                <MenuItem Header="_IMPORT">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_IMPORT}">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -209,14 +209,14 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </MenuItem.Icon>
-                    <MenuItem Header="FROM _WEB" Click="BtnWeb_Click" />
-                    <MenuItem Header="FROM GAME: _ARENA" Click="BtnArena_Click" Name="MenuItemImportArena" />
-                    <MenuItem Header="FROM _FILE" Click="BtnFile_Click" />
-                    <MenuItem Header="FROM _ID STRING" Click="BtnIdString_Click" />
-                    <MenuItem Header="FROM CLIPBOARD: _CARD NAMES" Click="BtnClipboardText_Click" />
-                    <MenuItem Header="FROM LAST _GAME" Click="BtnLastGame_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_FROMWEB}" Click="BtnWeb_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_FROMGAME}" Click="BtnArena_Click" Name="MenuItemImportArena" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_FROMFILE}" Click="BtnFile_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_FROMIDSTRING}" Click="BtnIdString_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_FROMCLIPBOARD}" Click="BtnClipboardText_Click" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_FROMLASTGAME}" Click="BtnLastGame_Click" />
                 </MenuItem>
-                <MenuItem Header="E_XPORT" Name="MenuItemExport">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_EXPORT}" Name="MenuItemExport">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -224,13 +224,13 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </MenuItem.Icon>
-                    <MenuItem Name="MenuItemExportToHs" Header="TO _HEARTHSTONE" Click="BtnExport_Click"></MenuItem>
-                    <MenuItem Header="TO HEARTHSTONE FROM _WEB" Click="BtnExportFromWeb_Click" ToolTip="This does not save the deck."></MenuItem>
-                    <MenuItem Name="MenuItemExportXml" Header="SAVE AS _XML" Click="BtnSaveToFile_OnClick"></MenuItem>
-                    <MenuItem Name="MenuItemExportIds" Header="COPY IDS TO _CLIPBOARD" Click="BtnClipboard_OnClick"></MenuItem>
-                    <MenuItem Name="MenuItemExportScreenshot" Header="_SCREENSHOT" Click="BtnScreenhot_Click"></MenuItem>
+                    <MenuItem Name="MenuItemExportToHs" Header="{DynamicResource MainWindow_MENUITEM_TOHEARTHSTONE}" Click="BtnExport_Click"></MenuItem>
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_TOHEARTHSTONEFROMWEB}" Click="BtnExportFromWeb_Click" ToolTip="This does not save the deck."></MenuItem>
+                    <MenuItem Name="MenuItemExportXml" Header="{DynamicResource MainWindow_MENUITEM_SAVEASXML}" Click="BtnSaveToFile_OnClick"></MenuItem>
+                    <MenuItem Name="MenuItemExportIds" Header="{DynamicResource MainWindow_MENUITEM_COPYIDSTOCLIPBOARD}" Click="BtnClipboard_OnClick"></MenuItem>
+                    <MenuItem Name="MenuItemExportScreenshot" Header="{DynamicResource MainWindow_MENUITEM_SCREENSHOT}" Click="BtnScreenhot_Click"></MenuItem>
                 </MenuItem>
-                <MenuItem Header="_STATS"  Click="BtnDeckStats_Click">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_STATS}"  Click="BtnDeckStats_Click">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -239,7 +239,7 @@
                         </Rectangle>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="_REPLAYS">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_ERPLAYS}">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -247,9 +247,9 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </MenuItem.Icon>
-                    <MenuItem Header="_LAST GAME" Click="MenuItemReplayLastGame_OnClick"/>
-                    <MenuItem Header="_SELECT GAME" Click="MenuItemReplaySelectGame_OnClick" />
-                    <MenuItem Header="LOAD _FiLE" Click="MenuItemReplayFromFile_OnClick"/>
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_LASTGAME}" Click="MenuItemReplayLastGame_OnClick"/>
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_SELECTGAME}" Click="MenuItemReplaySelectGame_OnClick" />
+                    <MenuItem Header="{DynamicResource MainWindow_MENUITEM_LOADFILE}" Click="MenuItemReplayFromFile_OnClick"/>
                 </MenuItem>
             </Menu>
             <Separator Grid.Row="0" Grid.ColumnSpan="3" Margin="0,29,0,0" Panel.ZIndex="2"></Separator>
@@ -313,7 +313,7 @@
 
 
             <Menu Name="MenuNewDeck" Grid.Column="3" Grid.Row="0" Visibility="Collapsed">
-                <MenuItem Header="SAVE" Click="BtnSaveDeck_Click">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_SAVE}" Click="BtnSaveDeck_Click">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -322,7 +322,7 @@
                         </Rectangle>
                     </MenuItem.Icon>
                 </MenuItem>
-                <MenuItem Header="CANCEL" Click="BtnCancelEdit_Click">
+                <MenuItem Header="{DynamicResource MainWindow_MENUITEM_CANCEL}" Click="BtnCancelEdit_Click">
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
                             <Rectangle.Fill>
@@ -333,7 +333,7 @@
                 </MenuItem>
                 <MenuItem>
                     <MenuItem.Header>
-                        <TextBlock VerticalAlignment="Center" Margin="-10,0,0,0" Text="FILTER"></TextBlock>
+                        <TextBlock VerticalAlignment="Center" Margin="-10,0,0,0" Text="{DynamicResource MainWindow_MENUITEM_FILTER}"></TextBlock>
                     </MenuItem.Header>
                     <MenuItem.Icon>
                         <Rectangle Width="16" Height="16">
@@ -342,8 +342,8 @@
                             </Rectangle.Fill>
                         </Rectangle>
                     </MenuItem.Icon>
-                    <MenuItem Name="MenuFilterMana" Header="MANA">
-                        <RadioButton Content="ALL" IsChecked="True" Click="BtnFilter_OnClick" Margin="-24,0,0,0"
+                    <MenuItem Name="MenuFilterMana" Header="{DynamicResource MainWindow_MENUITEM_MANA}">
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_ALL}" IsChecked="True" Click="BtnFilter_OnClick" Margin="-24,0,0,0"
                                      FontSize="14" />
                         <RadioButton Content="0" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
                         <RadioButton Content="1" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
@@ -356,19 +356,19 @@
                         <RadioButton Content="8" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
                         <RadioButton Content="9+" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
                     </MenuItem>
-                    <MenuItem Name="MenuFilterType" Header="TYPE">
-                        <RadioButton Content="ALL" IsChecked="True" Click="BtnFilter_OnClick" Margin="-24,0,0,0"
+                    <MenuItem Name="MenuFilterType" Header="{DynamicResource MainWindow_RADIOBUTTON_TYPE}">
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_ALL}" IsChecked="True" Click="BtnFilter_OnClick" Margin="-24,0,0,0"
                                      FontSize="14" />
-                        <RadioButton Content="CLASS ONLY" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
-                        <RadioButton Content="NEUTRAL ONLY" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_CLASSONLY}" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_NEUTRALONLY}" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
                     </MenuItem>
-                    <MenuItem Name="MenuFilterSet" Header="SET">
-                        <RadioButton Content="ALL" IsChecked="True" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
-                        <RadioButton Content="BASIC" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
-                        <RadioButton Content="EXPERT" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
-                        <RadioButton Content="PROMOTION" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
-                        <RadioButton Content="CURSE OF NAXXRAMAS" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
-                        <RadioButton Content="GOBLINS VS GNOMES" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                    <MenuItem Name="MenuFilterSet" Header="{DynamicResource MainWindow_MENUITEM_SET}">
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_ALL}" IsChecked="True" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_BASIC}" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_EXPERT}" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_PROMOTION}" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_CURSEOFNAXXRAMAS}" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
+                        <RadioButton Content="{DynamicResource MainWindow_RADIOBUTTON_GOBLINSVSGNOMES}" Click="BtnFilter_OnClick" Margin="-24,0,0,0" FontSize="14" />
                     </MenuItem>
                 </MenuItem>
             </Menu>
@@ -384,7 +384,7 @@
                              TextWrapping="NoWrap" Text="" VerticalAlignment="Top"
                              TextChanged="TextBoxDeckName_TextChanged" DockPanel.Dock="Left" />
 
-                    <Rectangle Name="DeckNameExistsWarning" Width="16" Height="16" ToolTip="Name already exists" Visibility="Collapsed" Margin="3,0,0,0">
+                    <Rectangle Name="DeckNameExistsWarning" Width="16" Height="16" ToolTip="{DynamicResource MainWindow_NAMEALREADYEXISTS}" Visibility="Collapsed" Margin="3,0,0,0">
                         <Rectangle.Fill>
                             <VisualBrush Visual="{StaticResource appbar_warning}" />
                         </Rectangle.Fill>
