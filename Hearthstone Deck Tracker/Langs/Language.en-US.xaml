@@ -117,7 +117,24 @@
 
     <!--Options.xaml-->
     <s:String x:Key="Options_TABITEM_GENERAL">General</s:String>
-
-
+    <s:String x:Key="Options_ADDTIONALWINDOWs">Additional Windows</s:String>
+    <s:String x:Key="Options_PLAYERDECK">Player deck</s:String>
+    <s:String x:Key="Options_TOPMOST">Topmost</s:String>
+    <s:String x:Key="Options_ONLYIFHSINFOREGROUND">Only if HS in foreground</s:String>
+    <s:String x:Key="Options_CARDTOOLTIPS">Card tooltips</s:String>
+    <s:String x:Key="Options_TIMER">Timer</s:String>
+    <s:String x:Key="Options_BACKGROUND">Background:</s:String>
+    <s:String x:Key="Options_CUSTOMHEX">Custom hex:</s:String>
+    <s:String x:Key="Options_HIDECOMPLETELY">Hide (completely)</s:String>
+    <s:String x:Key="Options_HIDEINMENU">Hide in menu</s:String>
+    <s:String x:Key="Options_HIDEINSPECTATOR">Hide in spectator</s:String>
+    <s:String x:Key="Options_HIDEIFHSINBACKGROUND">Hide if HS in background</s:String>
+    <s:String x:Key="Options_HIDEDECKS">Hide decks</s:String>
+    <s:String x:Key="Options_HIDETIMERS">Hide timers</s:String>
+    <s:String x:Key="Options_HIDECARDAGE">Hide card-age</s:String>
+    <s:String x:Key="Options_HIDECARDMARKS">Hide card-marks</s:String>
+    <s:String x:Key="Options_HIDESECRETS">Hide secrets</s:String> 
+    <s:String x:Key="Options_FORSECRETSONLY">For secrets only</s:String>
+    <s:String x:Key="Options_ADDITIONALCARDTOOLTIPS">Additional card tooltips</s:String>
 
 </ResourceDictionary>

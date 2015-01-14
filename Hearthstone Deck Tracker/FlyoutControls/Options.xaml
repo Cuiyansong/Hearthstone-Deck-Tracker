@@ -21,57 +21,57 @@
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
-                        <GroupBox Header="Additional Windows" Grid.Column="1" Grid.Row="0"
+                        <GroupBox Header="{DynamicResource Options_ADDTIONALWINDOWs}" Grid.Column="1" Grid.Row="0"
                                   HorizontalAlignment="Center" VerticalAlignment="Top" Width="234" Height="284"
                                   Margin="11,0,2,0">
                             <StackPanel>
                                 <StackPanel Orientation="Horizontal">
 
                                     <CheckBox x:Name="CheckboxPlayerWindowOpenAutomatically"
-                                              Content="Player deck" HorizontalAlignment="Left"
+                                              Content="{DynamicResource Options_PLAYERDECK}" HorizontalAlignment="Left"
                                               Margin="10,5,0,0" VerticalAlignment="Top"
                                               Checked="CheckboxPlayerWindowOpenAutomatically_Checked"
                                               Unchecked="CheckboxPlayerWindowOpenAutomatically_Unchecked" />
 
                                     <CheckBox x:Name="CheckboxOpponentWindowOpenAutomatically"
-                                              Content="Opponent deck" HorizontalAlignment="Left"
+                                              Content="{DynamicResource Options_OPPONENTDECK}" HorizontalAlignment="Left"
                                               Margin="10,5,0,0" VerticalAlignment="Top"
                                               Checked="CheckboxOpponentWindowOpenAutomatically_Checked"
                                               Unchecked="CheckboxOpponentWindowOpenAutomatically_Unchecked" />
                                 </StackPanel>
-                                <CheckBox x:Name="CheckboxWindowsTopmost" Content="Topmost"
+                                <CheckBox x:Name="CheckboxWindowsTopmost" Content="{DynamicResource Options_TOPMOST}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxWindowsTopmost_Checked"
                                           Unchecked="CheckboxWindowsTopmost_Unchecked" />
                                 <CheckBox x:Name="CheckboxWinTopmostHsForeground"
-                                          Content="Only if HS in foreground" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Options_ONLYIFHSINFOREGROUND}" HorizontalAlignment="Left"
                                           Margin="30,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxWinTopmostHsForeground_Checked"
                                           Unchecked="CheckboxWinTopmostHsForeground_Unchecked" />
-                                <CheckBox x:Name="CheckboxWindowCardToolTips" Content="Card tooltips"
+                                <CheckBox x:Name="CheckboxWindowCardToolTips" Content="{DynamicResource Options_CARDTOOLTIPS}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxWindowCardToolTips_Checked"
                                           Unchecked="CheckboxWindowCardToolTips_Unchecked" />
                                 <Separator Margin="0,5,0,0" />
                                 <CheckBox x:Name="CheckboxTimerWindow"
-                                          Content="Timer" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Options_TIMER}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxTimerWindow_Checked"
                                           Unchecked="CheckboxTimerWindow_Unchecked" />
 
 
-                                <CheckBox x:Name="CheckboxTimerTopmost" Content="Topmost"
+                                <CheckBox x:Name="CheckboxTimerTopmost" Content="{DynamicResource Options_TOPMOST}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxTimerTopmost_Checked"
                                           Unchecked="CheckboxTimerTopmost_Unchecked" />
                                 <CheckBox x:Name="CheckboxTimerTopmostHsForeground"
-                                          Content="Only if HS in foreground" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Options_ONLYIFHSINFOREGROUND}" HorizontalAlignment="Left"
                                           Margin="30,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxTimerTopmostHsForeground_Checked"
                                           Unchecked="CheckboxTimerTopmostHsForeground_Unchecked" />
                                 <Separator Margin="0,5,0,0" />
                                 <DockPanel Margin="10,5,10,0">
-                                    <Label Content="Background:" HorizontalAlignment="Left"
+                                    <Label Content="{DynamicResource Options_BACKGROUND}" HorizontalAlignment="Left"
                                            VerticalAlignment="Top" />
                                     <ComboBox x:Name="ComboboxWindowBackground" HorizontalAlignment="Right"
                                               Margin="5,0,0,0" VerticalAlignment="Top" Width="110"
@@ -83,7 +83,7 @@
                                     </ComboBox>
                                 </DockPanel>
                                 <DockPanel Margin="10,5,10,0">
-                                    <Label Content="Custom hex:" HorizontalAlignment="Left"
+                                    <Label Content="{DynamicResource Options_CUSTOMHEX}" HorizontalAlignment="Left"
                                            VerticalAlignment="Top" />
                                     <TextBox x:Name="TextboxCustomBackground" HorizontalAlignment="Right"
                                              Height="23" HorizontalContentAlignment="Center" Margin="10,0,0,0"
@@ -96,60 +96,60 @@
                                   HorizontalAlignment="Left" VerticalAlignment="Top" Height="auto" Width="235"
                                   Margin="5,0,0,0">
                             <StackPanel>
-                                <CheckBox x:Name="CheckboxHideOverlay" Content="Hide (completely)"
+                                <CheckBox x:Name="CheckboxHideOverlay" Content="{DynamicResource Options_HIDECOMPLETELY}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHideOverlay_Checked"
                                           Unchecked="CheckboxHideOverlay_Unchecked" />
-                                <CheckBox x:Name="CheckboxHideOverlayInMenu" Content="Hide in menu"
+                                <CheckBox x:Name="CheckboxHideOverlayInMenu" Content="{DynamicResource Options_HIDEINMENU}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHideOverlayInMenu_Checked"
                                           Unchecked="CheckboxHideOverlayInMenu_Unchecked" />
-                                <CheckBox x:Name="CheckboxHideOverlayInSpectator" Content="Hide in spectator"
+                                <CheckBox x:Name="CheckboxHideOverlayInSpectator" Content="{DynamicResource Options_HIDEINSPECTATOR}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHideOverlayInSpectator_Checked"
                                           Unchecked="CheckboxHideOverlayInSpectator_Unchecked" />
                                 <CheckBox x:Name="CheckboxHideOverlayInBackground"
-                                          Content="Hide if HS in background" HorizontalAlignment="Left"
+                                          Content="{DynamicResource Options_HIDEIFHSINBACKGROUND}" HorizontalAlignment="Left"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHideOverlayInBackground_Checked"
                                           Unchecked="CheckboxHideOverlayInBackground_Unchecked" />
                                 <DockPanel>
-                                    <CheckBox x:Name="CheckboxHideDecksInOverlay" Content="Hide decks"
+                                    <CheckBox x:Name="CheckboxHideDecksInOverlay" Content="{DynamicResource Options_HIDEDECKS}"
                                               HorizontalAlignment="Left" Margin="10,5,0,0"
                                               VerticalAlignment="Top"
                                               Checked="CheckboxHideDecksInOverlay_Checked"
                                               Unchecked="CheckboxHideDecksInOverlay_Unchecked" />
-                                    <CheckBox x:Name="CheckboxHideTimers" Content="Hide timers"
+                                    <CheckBox x:Name="CheckboxHideTimers" Content="{DynamicResource Options_HIDETIMERS}"
                                               HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0"
                                               VerticalAlignment="Top" Checked="CheckboxHideTimers_Checked"
                                               Unchecked="CheckboxHideTimers_Unchecked" Margin="10,5,0,0" />
                                 </DockPanel>
-                                <CheckBox x:Name="CheckboxHideOpponentCardAge" Content="Hide card-age"
+                                <CheckBox x:Name="CheckboxHideOpponentCardAge" Content="{DynamicResource Options_HIDECARDAGE}"
                                           HorizontalAlignment="Left" Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHideOpponentCardAge_Checked"
                                           Unchecked="CheckboxHideOpponentCardAge_Unchecked" />
-                                <CheckBox x:Name="CheckboxHideOpponentCardMarks" Content="Hide card-marks"
+                                <CheckBox x:Name="CheckboxHideOpponentCardMarks" Content="{DynamicResource Options_HIDECARDMARKS}"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxHideOpponentCardMarks_Checked"
                                           Unchecked="CheckboxHideOpponentCardMarks_Unchecked"
                                           HorizontalAlignment="Left" Width="114" />
-                                <CheckBox x:Name="CheckboxHideSecrets" Content="Hide secrets"
+                                <CheckBox x:Name="CheckboxHideSecrets" Content="{DynamicResource Options_HIDESECRETS}"
                                           HorizontalAlignment="Left" Grid.Column="0" Grid.Row="0"
                                           VerticalAlignment="Top" Checked="CheckboxHideSecrets_Checked"
                                           Unchecked="CheckboxHideSecrets_Unchecked" Margin="10,5,0,0" />
-                                <CheckBox x:Name="CheckboxOverlayCardToolTips" Content="Card tooltips"
+                                <CheckBox x:Name="CheckboxOverlayCardToolTips" Content="{DynamicResource Options_CARDTOOLTIPS}"
                                           Margin="10,5,0,0" VerticalAlignment="Top"
                                           Checked="CheckboxOverlayCardToolTips_Checked"
                                           Unchecked="CheckboxOverlayCardToolTips_Unchecked"
                                           HorizontalAlignment="Left" Width="114" />
                                 <CheckBox x:Name="CheckboxOverlaySecretToolTipsOnly"
-                                          Content="For secrets only" Margin="30,5,0,0"
+                                          Content="{DynamicResource Options_FORSECRETSONLY}" Margin="30,5,0,0"
                                           VerticalAlignment="Top"
                                           Checked="CheckboxOverlaySecretToolTipsOnly_Checked"
                                           Unchecked="CheckboxOverlaySecretToolTipsOnly_Unchecked"
                                           HorizontalAlignment="Left" />
                                 <CheckBox x:Name="CheckboxOverlayAdditionalCardToolTips"
-                                          Content="Additional card tooltips" Margin="30,5,0,0"
+                                          Content="{DynamicResource Options_ADDITIONALCARDTOOLTIPS}" Margin="30,5,0,0"
                                           VerticalAlignment="Top"
                                           Checked="CheckboxOverlayAdditionalCardToolTips_Checked"
                                           Unchecked="CheckboxOverlayAdditionalCardToolTips_Unchecked"
